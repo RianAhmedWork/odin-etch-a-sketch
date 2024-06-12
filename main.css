@@ -1,0 +1,11 @@
+body {
+  display: flex;
+  min-height: 100%;
+  border: solid;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+html {
+  height: 100%;
+}
