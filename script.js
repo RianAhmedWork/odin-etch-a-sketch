@@ -17,8 +17,7 @@ function createGrid(num) {
 const grid = document.getElementsByClassName("block");
 
 for (i = 0; i < grid.length; i++) {
-  grid[i].addEventListener("click", function() {
-    grid[i].style.backgroundColor = "black";
-    alert("Hello");
-  })
+  grid[i].addEventListener("mouseover", function() {
+    this.classList.add("black");
+  });
 }

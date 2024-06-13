@@ -20,7 +20,6 @@ html {
   gap: 0px;
 }
 
-
-.block:hover {
-  background-color: yellow;
+.black {
+  background-color: black;
 }
