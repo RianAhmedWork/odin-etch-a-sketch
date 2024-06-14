@@ -12,12 +12,32 @@ function createGrid(num) {
       main.appendChild(block);
     }
   }
+  etchBlack();
 }
 
-const grid = document.getElementsByClassName("block");
+function deleteGrid(num) {
+  while (main.firstChild) {
+    main.removeChild(main.firstChild);
+  }
+  createGrid(num);
+}
 
-for (i = 0; i < grid.length; i++) {
-  grid[i].addEventListener("mouseover", function() {
-    this.classList.add("black");
-  });
+function etchBlack() {
+  const grid = document.getElementsByClassName("block");
+  for (i = 0; i < grid.length; i++) {
+    grid[i].addEventListener("mouseover", function() {
+      this.classList.add("black");
+    });
+  }
+}
+
+const newGrid = document.getElementById("newGrid");
+newGrid.addEventListener("click", promptUser());
+
+function promptUser() {
+  let num = prompt("Enter a number from 1 to 100");
+  while (num < 1 || num > 100) {
+    num = prompt("Enter a number from 1 to 100");
+  }
+  deleteGrid(num);
 }
