@@ -31,12 +31,12 @@ function etchBlack() {
   }
 }
 
-const newGrid = document.getElementById("newGrid");
-newGrid.addEventListener("click", promptUser());
+const newGrid = document.querySelector("#newGrid");
+newGrid.addEventListener("click", promptUser);
 
 function promptUser() {
   let num = prompt("Enter a number from 1 to 100");
-  while (num < 1 || num > 100) {
+  while ((num < 1 || num > 100)) {
     num = prompt("Enter a number from 1 to 100");
   }
   deleteGrid(num);
